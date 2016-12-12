@@ -10,11 +10,11 @@ Make your list items bouncing like messages on iOS when scrolling or fire a cust
 
 # Install
 
-- Installation with <a target="_blank" href="https://www.npmjs.com/package/domlastic">npm</a>: packagename "domlastic"    
+<!-- - Installation with <a target="_blank" href="https://www.npmjs.com/package/domlastic">npm</a>: packagename "domlastic"    
 `$ npm install domlastic`
 
 - Installation with <a target="_blank" href="https://libraries.io/bower/domlastic">bower.io</a>: packagename "domlastic"    
-`$ bower install domlastic`
+`$ bower install domlastic` -->
 
 - Manual installation: copy and link the file domlastic.js to your project    
 [domlastic.js][1]
@@ -26,15 +26,15 @@ Make your list items bouncing like messages on iOS when scrolling or fire a cust
 
 ## Init DomLastic and trigger animation on drag stop event
 
-```javascript
+```html
+<script>
 DomLastic.init({
   itemsClassnameToJoin: 'item'
 });
 //if drag stopped...
 DomLastic.animateItems();
-```
+</script>
 
-```html
 <div>
   <div class="item">item 1</div>
   <div class="item">item 2</div>
@@ -45,7 +45,8 @@ DomLastic.animateItems();
 ## Callback after animation has finished
 
 
-```javascript
+```html
+<script>
 DomLastic.init ({
   itemsClassnameToJoin: 'item',
   callback: function() {
@@ -54,9 +55,8 @@ DomLastic.init ({
 });
 //on click after element was removed...
 DomLastic.animateItems();
-```
+</script>
 
-```html
 <div>
   <div class="item">item 1</div>
   <div class="item">item 2</div>
@@ -69,7 +69,8 @@ DomLastic.animateItems();
 
 use jQuery to fire ClickSpark independently for example like this:
 
-```javascript
+```html
+<script>
 DomLastic.init({
   itemsClassnameToJoin: 'item'
   itemsJointStrength: 10, //value optimum between 10 - 100
@@ -79,8 +80,7 @@ DomLastic.init({
 });
 //on click after element was removed...
 DomLastic.animateItems();
-```
-```html
+</script>
 <div>
   <div class="item">item 1</div>
   <div class="item">item 2</div>
