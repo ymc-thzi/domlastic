@@ -31,7 +31,7 @@ Make your list items bouncing like messages on iOS when scrolling or fire a cust
 domLastic.init({
   itemsClassnameToJoin: 'item'
 });
-//if drag stopped...
+
 DomLastic.animateItems();
 </script>
 
@@ -53,7 +53,7 @@ domLastic.init ({
     console.log( 'anim finished');
   }
 });
-//on click after element was removed...
+
 DomLastic.animateItems();
 </script>
 
@@ -78,7 +78,7 @@ domLastic.init({
   animationIntensity: 0.6, //value optimum optimum 0.5 - 1
   animationDirection: 'horizontal'
 });
-//on click after element was removed...
+
 DomLastic.animateItems();
 </script>
 <div>
