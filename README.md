@@ -24,7 +24,7 @@ Make your list items bouncing like messages on iOS when scrolling or fire a cust
 
 # Usage
 
-## Init and trigger animation on drag stop event
+## Example 1: Init and trigger animation on drag stop event
 
 ```html
 <script>
@@ -42,7 +42,7 @@ DomLastic.animateItems();
 </div>
 ```
 
-## Callback after animation has finished
+## Example 2: Callback after animation has finished
 
 
 ```html
@@ -65,7 +65,7 @@ DomLastic.animateItems();
 ```
 
 
-## Horizontal animation with custom parameters. Trigger any DOM element like Images...
+## Example 3: Horizontal animation with custom parameters. Trigger any DOM element like Images...
 
 ```html
 <script>
