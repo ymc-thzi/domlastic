@@ -67,8 +67,6 @@ DomLastic.animateItems();
 
 ## Horizontal animation with custom parameters. Trigger any DOM element like Images...
 
-use jQuery to fire ClickSpark independently for example like this:
-
 ```html
 <script>
 domLastic.init({
@@ -82,9 +80,9 @@ domLastic.init({
 DomLastic.animateItems();
 </script>
 <div>
-  <div class="item">item 1</div>
-  <div class="item">item 2</div>
-  <div class="item">item 3</div>
+  <div class="item"><img src="..." /></div>
+  <div class="item"><img src="..." /></div>
+  <div class="item"><img src="..." /></div>
 </div>
 ```
 
