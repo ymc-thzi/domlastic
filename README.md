@@ -9,11 +9,11 @@ Make your list items bouncing like messages on iOS when scrolling or fire a cust
 
 # Install
 
-<!-- - Installation with <a target="_blank" href="https://www.npmjs.com/package/domlastic">npm</a>: packagename "domlastic"    
+- Installation with <a target="_blank" href="https://www.npmjs.com/package/domlastic">npm</a>: packagename "domlastic"    
 `$ npm install domlastic`
 
 - Installation with <a target="_blank" href="https://libraries.io/bower/domlastic">bower.io</a>: packagename "domlastic"    
-`$ bower install domlastic` -->
+`$ bower install domlastic`
 
 - Manual installation: copy and link the file domlastic.js to your project    
 [domlastic.js][1]
