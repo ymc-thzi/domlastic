@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="demoFrame">
+
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>DomLastic.js</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta name="description" content="">
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="assets/jquery.js"></script>
+	<script type="text/javascript" src="assets/jquery-ui.js"></script>
+
+	<!-- domLastic.js -->
+	<script type="text/javascript" src="../dist/domlastic.js"></script>
+	<link rel="stylesheet" href="assets/demopage-styles.css" type="text/css" />
+
+	<!-- set example DomLastic events -->
+	<script>
+		$(document).ready(function() {
+
+			domLastic.init({
+				itemsClassnameToJoin: 'item', //cssSelector for items to join
+			});
+
+			$('.container-1 .listToAnimate').animate({
+				top: 0
+			}, 500, 'easeInQuad', function() {
+				domLastic.animateItems();
+			});
+			$('.listToAnimate').draggable({
+				axis: 'y',
+				stop: function(event, ui) {
+					$('.container-1 .listToAnimate').animate({
+						top: 0
+					}, 200, 'easeInQuad', function() {
+						domLastic.animateItems();
+					});
+				}
+			});
+
+		});
+	</script>
+
+	<body class="demoFrame">
+		<div class="demoFrame-1-header">
+			<h2>Example 1:<br>Init DomLastic and trigger animation on drag stop event</h2>
+		</div>
+		<div class="code">
+			<span class="color-1">DomLastic</span><span class="color-2">.init</span>({<br> &nbsp;&nbsp;itemsClassnameToJoin: <span class="color-3">'item'</span><br> });
+			<br>
+			<span class="comment">//if drag stopped...</span><br>
+			<span class="color-1">DomLastic</span><span class="color-2">.animateItems();</span><br><br>
+		</div>
+		<div class="container container-1">
+			<h3>Drag items</h3>
+			<div class="listToAnimate">
+				<div class="item white left">FloralWhite</div>
+				<div class="item green right">Khaki</div>
+				<div class="item white left">SandyBrown</div>
+				<div class="item green right">Gainsboro</div>
+				<div class="item green right">MediumSeaGreen</div>
+				<div class="item green right">MediumSeaGreen</div>
+				<div class="item white left">Teal</div>
+				<div class="item green right">YellowGreen</div>
+				<div class="item white left">Sienna</div>
+				<div class="clear"></div>
+
+			</div>
+			<div class="reload" onclick="location.reload();">↻</div>
+		</div>
+	</body>
+
+</html>

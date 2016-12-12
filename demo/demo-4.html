@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="demoFrame">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DomLastic.js</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/jquery.js"></script>
+    <script type="text/javascript" src="assets/jquery-ui.js"></script>
+
+    <!-- domLastic.js -->
+    <script type="text/javascript" src="../dist/domlastic.js"></script>
+    <link rel="stylesheet" href="assets/demopage-styles.css" type="text/css" />
+
+    <!-- set example DomLastic events -->
+    <script>
+        $(document).ready(function() {
+
+            domLastic.init({
+                itemsClassnameToJoin: 'item', //cssSelector for items to join
+                animationDirection: 'horizontal', //'vertical' or 'horizontal'
+            });
+            domLastic.animateItems();
+
+            function registerClicks() {
+                $(document).find('.listToAnimate .item').unbind('click');
+                //deleting item from horizontal list
+                $(document).find('.listToAnimate .item:not(:last-child)').click(function() {
+                    $(this).animate({
+                        opacity: 0
+                    }, 0, function() {
+                        $(this).animate({
+                            marginLeft: -($(this).outerWidth())
+                        }, 250, 'easeInQuad', function() {
+                            $(this).remove();
+                            domLastic.animateItems();
+                            setTimeout(function() {
+                                registerClicks();
+                            }, 10);
+                        });
+                    });
+                });
+                $(document).find('.listToAnimate .item:last-child').click(function() {
+                    $(this).animate({
+                        opacity: 0
+                    }, 0, function() {
+                        $(this).animate({
+                            marginLeft: -($(this).outerWidth())
+                        }, 250, 'easeInQuad', function() {
+                            $(this).remove();
+                            setTimeout(function() {
+                                registerClicks();
+                            }, 10);
+
+                        });
+                    });
+                });
+            }
+            registerClicks();
+
+        });
+    </script>
+
+</head>
+
+<body class="demoFrame">
+    <div class="container container-4">
+        <h3>Click to delete images</h3>
+        <div class="listToAnimate">
+            <div class="item"><img width="110" height="70" src="assets/thumb-1.jpg" /></div>
+            <div class="item"><img width="110" height="70" src="assets/thumb-3.jpg" /></div>
+            <div class="item"><img width="110" height="70" src="assets/thumb-2.jpg" /></div>
+            <div class="item"><img width="110" height="70" src="assets/thumb-4.jpg" /></div>
+        </div>
+        <div class="reload" onclick="location.reload();">↻</div>
+    </div>
+</body>
+
+</html>

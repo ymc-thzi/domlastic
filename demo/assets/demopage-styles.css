@@ -1,0 +1,226 @@
+html {
+    height: 100%;
+    background: #373737;
+    background: radial-gradient(ellipse at center, #373737 0%, #222 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    color: #ccc;
+    font-family: Menlo;
+    margin: 0;
+    padding: 0;
+    background: #373737;
+    background: radial-gradient(ellipse at center, #373737 0%, #222 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #fff;
+}
+
+h2, h3, h4 {
+    color: #ccc;
+    font-weight: 100;
+}
+
+h2 {
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+h3 {
+    margin: -10px 0 45px;
+    font-size: 16px;
+}
+
+p {
+    width: 59%;
+    margin: auto;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #3f3f3f;
+    font-weight: 100;
+    padding-bottom: 3px;
+    font-size: 12px;
+}
+
+.demo {
+    min-height: 95%;
+    text-align: center;
+}
+
+.demoFrame-1-header, .demoFrame-2-header, .demoFrame-3-header {
+    border-bottom: 1px solid #3f3f3f;
+    margin-right: 10px;
+}
+
+iframe {
+    overflow: hidden;
+    height: 730px;
+    width: 280px;
+    vertical-align: top;
+    background-color: transparent;
+}
+
+.demoFrame {
+    background: transparent;
+}
+
+.demoFrame-3, .demoFrame-4 {
+    width: 550px;
+}
+
+.demoFrame-3 {
+    height: 470px;
+}
+
+.demoFrame-4 {
+    height: 330px;
+}
+
+.frame-container {
+    display: inline-block;
+    position: relative;
+}
+
+.container {
+    background-size: cover;
+    padding: 30px 20px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 3px 11px rgba(0, 0, 0, 0.2);
+    height: 420px;
+    width: 225px;
+    position: relative;
+    background-color: ;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.container-3, .container-4 {
+    width: 490px;
+}
+
+.container.container-3, .container.container-4 {
+    height: 160px;
+}
+
+.container-1 .listToAnimate {
+    position: relative;
+    top: 150px;
+}
+
+.clear {
+    clear: both;
+}
+
+.item {
+    padding: 13px 35px;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    box-shadow: 2px 3px 11px rgba(0, 0, 0, 0.2);
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+
+.container-1 .item {
+    cursor: inherit;
+    display: inline-block;
+    width: auto;
+    padding: 8px 30px;
+}
+
+.container-1 .listToAnimate {
+    cursor: move;
+}
+
+.container-1 .item.left {
+    float: left;
+}
+
+.container-1 .item.right {
+    float: right;
+}
+
+.container-3 .item, .container-4 .item {
+    display: inline-block;
+    width: auto;
+    padding: 5px 8px;
+}
+
+.container-3 .item {
+    margin-right: 0px;
+}
+
+.container-4 .item {
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.container-4 .item img {
+    box-shadow: 2px 3px 11px rgba(0, 0, 0, 0.4);
+}
+
+.green {
+    background-color: #01BC55;
+}
+
+.grey {
+    background-color: #3E5970;
+}
+
+.yellow {
+    background-color: #CCBF05;
+}
+
+.red {
+    background-color: #E64A28;
+}
+
+.white {
+    background-color: #F5F4F5;
+    color: #333;
+}
+
+.reload {
+    position: absolute;
+    bottom: 5px;
+    right: 13px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.code {
+    font-size: 11px;
+    min-height: 140px;
+    margin-top: 25px;
+}
+
+.code .comment {
+    color: #555;
+}
+
+.color-1 {
+    color: #BDB8EF;
+}
+
+.color-2 {
+    color: #E9BC7D;
+}
+
+.color-3 {
+    color: #9EE949;
+}
+
+.color-4 {
+    color: #E264EE;
+}

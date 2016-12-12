@@ -1,0 +1,32 @@
+{
+  "name": "domlastic",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ymc-thzi/domlastic",
+  "authors": [
+    "Thomas Zinnbauer <ymc-thzi@ymc.ch>"
+  ],
+  "description": "DomLastic.js is a jquery plugin that adds jointed bouncing effects to your HTML elements. You can connect dom elements so that they behave like elastic physically jointed bodies. Make your list items bouncing like messages on iOS when scrolling or fire a customizable effect on any dom manipulation.",
+  "main": "dist/domlastic.js",
+  "keywords": [
+    "JavaScript",
+    "Elastic",
+    "Bounce",
+    "Animation",
+    "CSS transitions",
+    "DOM manipulation",
+    "HTML5",
+    "JQuery plugin"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

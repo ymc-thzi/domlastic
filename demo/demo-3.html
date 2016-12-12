@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="demoFrame">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DomLastic.js</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/jquery.js"></script>
+    <script type="text/javascript" src="assets/jquery-ui.js"></script>
+
+    <!-- domLastic.js -->
+    <script type="text/javascript" src="../dist/domlastic.js"></script>
+    <link rel="stylesheet" href="assets/demopage-styles.css" type="text/css" />
+
+    <!-- set example DomLastic events -->
+    <script>
+        $(document).ready(function() {
+
+            domLastic.init({
+                itemsClassnameToJoin: 'item', //cssSelector for items to join
+                itemsJointStrength: 10, //value optimum between 10 - 100
+                animationSpeed: 500, // value optimum 300 - 1000
+                animationIntensity: 0.6, // value optimum optimum 0.5 - 1
+                animationDirection: 'horizontal', //'vertical' or 'horizontal'
+            });
+            domLastic.animateItems();
+
+            function registerClicks() {
+                $(document).find('.listToAnimate .item').unbind('click');
+                //deleting item from horizontal list
+                $(document).find('.listToAnimate .item:not(:last-child)').click(function() {
+                    $(this).animate({
+                        opacity: 0
+                    }, 0, function() {
+                        $(this).animate({
+                            marginLeft: -($(this).outerWidth())
+                        }, 250, 'easeInQuad', function() {
+                            $(this).remove();
+                            domLastic.animateItems();
+                            setTimeout(function() {
+                                registerClicks();
+                            }, 10);
+                        });
+                    });
+                });
+                $(document).find('.listToAnimate .item:last-child').click(function() {
+                    $(this).animate({
+                        opacity: 0
+                    }, 0, function() {
+                        $(this).animate({
+                            marginLeft: -($(this).outerWidth())
+                        }, 250, 'easeInQuad', function() {
+                            $(this).remove();
+                            setTimeout(function() {
+                                registerClicks();
+                            }, 10);
+
+                        });
+                    });
+                });
+            }
+            registerClicks();
+        });
+    </script>
+</head>
+
+<body class="demoFrame">
+    <div class="demoFrame-3-header">
+        <h2>Example 3:<br>Horizontal animation with custom parameters.<br>Trigger any DOM element like Images...</h2>
+    </div>
+    <div class="code">
+        <span class="color-1">DomLastic</span><span class="color-2">.init</span>({<br> &nbsp;&nbsp;itemsClassnameToJoin: <span class="color-3">'item'</span><br> &nbsp;&nbsp;itemsJointStrength: <span class="color-4">10</span>, <span class="comment">//value optimum between 10 - 100</span><br>        &nbsp;&nbsp;animationSpeed: <span class="color-4">500</span>, <span class="comment">//value optimum 300 - 1000</span><br> &nbsp;&nbsp;animationIntensity: <span class="color-4">0.6</span>, <span class="comment">//value optimum optimum 0.5 - 1</span><br>        &nbsp;&nbsp;animationDirection: <span class="color-3">'horizontal'</span><br> });
+        <br>
+        <span class="comment">//on click after element was removed...</span><br>
+        <span class="color-1">DomLastic</span><span class="color-2">.animateItems();</span><br><br>
+    </div>
+    <div class="container container-3">
+        <h3>Click to delete item</h3>
+        <div class="listToAnimate">
+            <div class="item white">FloralWhite</div>
+            <div class="item white">Khaki</div>
+            <div class="item green">SandyBrown</div>
+            <div class="item white">Gainsboro</div>
+            <div class="item green">MediumSeaGreen</div>
+        </div>
+        <div class="reload" onclick="location.reload();">↻</div>
+    </div>
+</body>
+
+</html>

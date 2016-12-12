@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="demoFrame">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DomLastic.js</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/jquery.js"></script>
+    <script type="text/javascript" src="assets/jquery-ui.js"></script>
+
+    <!-- domLastic.js -->
+    <script type="text/javascript" src="../dist/domlastic.js"></script>
+    <link rel="stylesheet" href="assets/demopage-styles.css" type="text/css" />
+
+    <!-- set example DomLastic events -->
+    <script>
+        $(document).ready(function() {
+            domLastic.init({
+                itemsClassnameToJoin: 'item', //cssSelector for items to join
+                callback: function() {
+                    console.log('anim finished');
+                }
+            });
+            domLastic.animateItems();
+            //deleting item from vertical list
+            $('.item').click(function() {
+                $(this).slideToggle(150, function() {
+                    $(this).remove();
+                    //aniamte ListItems
+                    domLastic.animateItems();
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body class="demoFrame">
+    <div class="demoFrame-2-header">
+        <h2>Example 2:<br>Callback after animation has finished</h2>
+    </div>
+    <div class="code">
+        <span class="color-1">DomLastic</span><span class="color-2">.init</span> ({
+        <br> &nbsp;&nbsp;itemsClassnameToJoin: <span class="color-3">'item'</span>,<br> &nbsp;&nbsp;callback: <span class="color-4">function</span>() { <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="color-1">console</span><span class="color-2">.log</span>(
+        <span class="color-3">'anim finished'</span>);<br> &nbsp;&nbsp;}
+        <br> });
+        <br>
+        <span class="comment">//on click after element was removed...</span><br>
+        <span class="color-1">DomLastic</span><span class="color-2">.animateItems();</span><br><br>
+    </div>
+    <div class="container container-2">
+        <h3>Click to delete item</h3>
+        <div class="listToAnimate">
+            <div class="item green">FloralWhite</div>
+            <div class="item yellow">Khaki</div>
+            <div class="item grey">SandyBrown</div>
+            <div class="item red">Gainsboro</div>
+            <div class="item grey">MediumSeaGreen</div>
+            <div class="item green">Sienna</div>
+        </div>
+        <div class="reload" onclick="location.reload();">↻</div>
+    </div>
+</body>
+
+</html>
