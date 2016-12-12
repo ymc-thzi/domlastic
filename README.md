@@ -24,11 +24,11 @@ Make your list items bouncing like messages on iOS when scrolling or fire a cust
 
 # Usage
 
-## Init DomLastic and trigger animation on drag stop event
+## Init and trigger animation on drag stop event
 
 ```html
 <script>
-DomLastic.init({
+domLastic.init({
   itemsClassnameToJoin: 'item'
 });
 //if drag stopped...
@@ -47,7 +47,7 @@ DomLastic.animateItems();
 
 ```html
 <script>
-DomLastic.init ({
+domLastic.init ({
   itemsClassnameToJoin: 'item',
   callback: function() {
     console.log( 'anim finished');
@@ -71,7 +71,7 @@ use jQuery to fire ClickSpark independently for example like this:
 
 ```html
 <script>
-DomLastic.init({
+domLastic.init({
   itemsClassnameToJoin: 'item'
   itemsJointStrength: 10, //value optimum between 10 - 100
   animationSpeed: 500, //value optimum 300 - 1000
