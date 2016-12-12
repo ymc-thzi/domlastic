@@ -65,7 +65,7 @@ DomLastic.animateItems();
 ```
 
 
-## Example 3: Horizontal animation with custom parameters. Trigger any DOM element like Images...
+## Example 3: Horizontal animation with custom parameters. Connect any DOM element like Images...
 
 ```html
 <script>
