@@ -5,7 +5,7 @@ You can connect dom elements so that they behave like elastic physically jointed
 Make your list items bouncing like messages on iOS when scrolling or fire a customizable effect on any dom manipulation.
 <a target="_blank" href="http://www.ymc.ch/sandbox/domlastic/demo/index.html">TEST THE DEMO</a>
 
-<a target="_blank" href="http://www.ymc.ch/sandbox/domlastic/demo/index.html">
+<!-- <a target="_blank" href="http://www.ymc.ch/sandbox/domlastic/demo/index.html"> -->
 <!-- <img src="http://www.ymc.ch/sandbox/clickspark/sparkling-demo-1.11.0.gif"></a> -->
 
 # Install
@@ -92,15 +92,15 @@ DomLastic.animateItems();
 | --------------------- | ------------- | -----  |
 | itemsClassnameToJoin  |               | string |
 | itemsJointStrength    | 20            | int    |
-| animationSpeed        | 600           | int    |
+| animationSpeed        | 600           | int(ms)|
 | animationIntensity    | 0.5           | float  |
-| animationDirection    | 'explosion'   | string |
+| animationDirection    | 'horizontal'  | string |
 | callback              |               | func() |
 
 animationDirection Types:
 
-* horizontal
-* vertical
+* 'horizontal'
+* 'vertical'
 
 # Dependencies
 * jQuery
