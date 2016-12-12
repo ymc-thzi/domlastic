@@ -24,7 +24,7 @@ Make your list items bouncing like messages on iOS when scrolling or fire a cust
 
 # Usage
 
-## Example 1: Init and trigger animation on drag stop event
+## Example 1: Init and trigger animation
 
 ```html
 <script>
