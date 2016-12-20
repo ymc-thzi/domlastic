@@ -31,7 +31,7 @@ domLastic.init({
   itemsClassnameToJoin: 'item'
 });
 
-DomLastic.animateItems();
+domLastic.animateItems();
 </script>
 
 <div>
@@ -53,7 +53,7 @@ domLastic.init ({
   }
 });
 
-DomLastic.animateItems();
+domLastic.animateItems();
 </script>
 
 <div>
@@ -69,14 +69,14 @@ DomLastic.animateItems();
 ```html
 <script>
 domLastic.init({
-  itemsClassnameToJoin: 'item'
+  itemsClassnameToJoin: 'item',
   itemsJointStrength: 10, //value optimum between 10 - 100
   animationSpeed: 500, //value optimum 300 - 1000
   animationIntensity: 0.6, //value optimum optimum 0.5 - 1
   animationDirection: 'horizontal'
 });
 
-DomLastic.animateItems();
+domLastic.animateItems();
 </script>
 <div>
   <div class="item"><img src="..." /></div>
