@@ -28,7 +28,7 @@ Make your list items bouncing like messages on iOS when scrolling or fire a cust
 ```html
 <script>
 domLastic.init({
-  itemsClassnameToJoin: 'item'
+  itemsClassnameToConnect: 'item'
 });
 
 domLastic.animateItems();
@@ -47,7 +47,7 @@ domLastic.animateItems();
 ```html
 <script>
 domLastic.init ({
-  itemsClassnameToJoin: 'item',
+  itemsClassnameToConnect: 'item',
   callback: function() {
     console.log( 'anim finished');
   }
@@ -69,7 +69,7 @@ domLastic.animateItems();
 ```html
 <script>
 domLastic.init({
-  itemsClassnameToJoin: 'item',
+  itemsClassnameToConnect: 'item',
   itemsJointStrength: 10, //value optimum between 10 - 100
   animationSpeed: 500, //value optimum 300 - 1000
   animationIntensity: 0.6, //value optimum optimum 0.5 - 1
@@ -85,14 +85,14 @@ domLastic.animateItems();
 </div>
 ```
 
-| Attribute             | default       | type   |
-| --------------------- | ------------- | -----  |
-| itemsClassnameToJoin  |               | string |
-| itemsJointStrength    | 20            | int    |
-| animationSpeed        | 600           | int(ms)|
-| animationIntensity    | 0.5           | float  |
-| animationDirection    | 'horizontal'  | string |
-| callback              |               | func() |
+| Attribute               | default       | type   |
+| ----------------------- | ------------- | ------ |
+| itemsClassnameToConnect |               | string |
+| itemsJointStrength      | 20            | int    |
+| animationSpeed          | 600           | int(ms)|
+| animationIntensity      | 0.5           | float  |
+| animationDirection      | 'horizontal'  | string |
+| callback                |               | func() |
 
 animationDirection Types:
 

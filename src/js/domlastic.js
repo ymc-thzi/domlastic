@@ -14,7 +14,7 @@ var domLastic = function() {
     var $ = jQuery;
 
     //set defalut specs
-    var itemsClassnameToJoin = null;
+    var itemsClassnameToConnect = null;
     var itemsJointStrength = 20; //optimum between 10 - 100
     var animationSpeed = 600; // value optimum 300 - 1000
     var animationIntensity = 0.5; // value optimum 0.5 - 1
@@ -26,8 +26,8 @@ var domLastic = function() {
      */
     function setSpecs(spec) {
         if (spec) {
-            if (spec.itemsClassnameToJoin) {
-                itemsClassnameToJoin = spec.itemsClassnameToJoin
+            if (spec.itemsClassnameToConnect) {
+                itemsClassnameToConnect = spec.itemsClassnameToConnect
             }
             if (spec.itemsJointStrength) {
                 itemsJointStrength = spec.itemsJointStrength
@@ -51,8 +51,8 @@ var domLastic = function() {
      * private checkMandatoryParams
      */
     function checkSpecs() {
-        if (!itemsClassnameToJoin) {
-            throw 'Error: DomLastic "itemsClassnameToJoin" is not set.';
+        if (!itemsClassnameToConnect) {
+            throw 'Error: DomLastic "itemsClassnameToConnect" is not set.';
         }
         if (animationDirection !== 'horizontal' && animationDirection !== 'vertical') {
             throw 'Error: DomLastic "animationDirection" wrong value. Allowed values: "vertical" or "horizontal".';
@@ -180,14 +180,14 @@ var domLastic = function() {
          * public animateItems
          */
         animateItems: function() {
-            $(document).find('.' + itemsClassnameToJoin).each(function(index) {
+            $(document).find('.' + itemsClassnameToConnect).each(function(index) {
                 var element = $(this);
                 setTimeout(function() {
                     element.addClass('DomLastic-animate');
                 }, (index * itemsJointStrength) + Math.floor((Math.random() * 10) + 1));
             });
             setTimeout(function() {
-                $(document).find('.' + itemsClassnameToJoin).removeClass('DomLastic-animate');
+                $(document).find('.' + itemsClassnameToConnect).removeClass('DomLastic-animate');
             }, animationSpeed + 100);
             registerCallback();
         }
