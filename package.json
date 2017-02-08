@@ -28,5 +28,13 @@
   "bugs": {
     "url": "https://github.com/ymc-thzi/domlastic/issues"
   },
-  "homepage": "http://www.ymc.ch/sandbox/domlastic/demo/index.html"
+  "homepage": "http://www.ymc.ch/sandbox/domlastic/demo/index.html",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-less": "^3.3.0",
+    "gulp-uglify": "^2.0.1",
+    "gulp-uglifycss": "^1.0.6"
+  }
 }
