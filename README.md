@@ -3,7 +3,7 @@
 DomLastic.js is a jquery plugin that adds jointed bouncing effects to your HTML elements.    
 You can connect dom elements so that they behave like elastic physically jointed bodies.
 Make your list items bouncing like messages on iOS when scrolling or fire a customizable effect on any dom manipulation.
-<br><a target="_blank" href="http://www.ymc.ch/sandbox/domlastic/demo/index.html">TEST THE DEMO</a>
+<br><a target="_blank" href="https://ymc-thzi.github.io/domlastic/demo/">TEST THE DEMO</a>
 
 <a target="_blank" href="https://ymc-thzi.github.io/domlastic/demo/"><img src="https://raw.githubusercontent.com/ymc-thzi/domlastic/master/demo/domlasticdemo.gif"></a>
 
